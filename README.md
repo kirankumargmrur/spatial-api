@@ -95,6 +95,9 @@ After successful run of docker compose django app is exposed @http://localhost:8
   - [spatial/intersection?country={COUNTRY_NAME}](http://localhost:8000/spatial/intersection?country={COUNTRY_NAME})
       - Give the list and view of the intersection for the COUNTRY_NAME. Replace the COUNTRY_NAME with exact country name
 
+  - [countries/?q=query_string](http://localhost:8000/countries/?q=query_string)
+      -  Get all matching country names by string  
+
  
 
 ### Reference
