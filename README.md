@@ -68,8 +68,9 @@ PygeoAPI server can be called at @http://localhost:5000
   - [/collections/countries/delete/{id}](http://localhost:5000/collections/countries/delete/{id})
       - DELETE REST API to  delete the existing entry in the database with id passed in the url ({id} - id of the entry to be deleted)
 
- - [/collections/countries/intersect/{COUNTRY_NAME}](http://localhost:5000/collections/intersect/{COUNTRY_NAME})
+ - [/collections/countries/intersect/{COUNTRY_NAME}](http://localhost:5000/collectionscountries/intersect/{COUNTRY_NAME})
     - Give the list and view of the intersection for the COUNTRY_NAME. Replace the COUNTRY_NAME with exact country name
+    - Example: [INDIA](http://localhost:5000/collections/countries/intersect/India)
 
 ### Geo Django Server API Reference:
 After successful run of docker compose django app is exposed @http://localhost:8000 through gunicorn
