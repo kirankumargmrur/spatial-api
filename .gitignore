@@ -5,7 +5,12 @@ __pycache__/
 
 # C extensions
 *.so
-
+.idea
+postgresql
+postgresql_data
+rabbitmq
+celerybeat-schedule.db
+*/migrations
 # Distribution / packaging
 .Python
 build/
