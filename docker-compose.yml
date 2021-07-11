@@ -50,8 +50,6 @@ services:
       - db
       - webserver
     command: 'bash /app/pygeoapi_entrypoint.sh'
-    volumes:
-      - .:/app
     networks:
       - pixxel-net
     ports:
