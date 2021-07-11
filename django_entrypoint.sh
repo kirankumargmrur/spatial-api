@@ -16,6 +16,8 @@ PGPASSWORD=wDnfWovh4uf3  psql -U postgres -d pixxel -h db -c "ALTER TABLE countr
 PGPASSWORD=wDnfWovh4uf3  psql -U postgres -d pixxel -h db -c "ALTER TABLE countries RENAME wkb_geometry TO geometry ;"
 python3 manage.py makemigrations countries
 python3 manage.py migrate
+python3 manage.py migrate --fake sessions zero
+python3 manage.py migrate --fake-initial
 PGPASSWORD=wDnfWovh4uf3  psql -U postgres -d pixxel -h db -c "ALTER TABLE countries ALTER COLUMN geometry type geometry(MultiPolygon, 4326) using ST_Multi(geometry);"
 
 #Start server as gunicorn
