@@ -49,7 +49,7 @@ PygeoAPI server can be called at @http://localhost:5000
       - Retrive the list of all the countries
 
 
-  - [/collections/countries/items/{id}](http://localhost:5000/collections/countries/items/{id})
+  - [/collections/countries/items/{id}](http://localhost:5000/collections/countries/items/100)
       - Retrive Country which matches the id
 
 
