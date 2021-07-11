@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('create/', views.CountryCreate.as_view(), name='create-country'),
     path('countries/', views.CountryList.as_view()),
+    path('', views.CountryList.as_view()),
     path('countries/<int:pk>/', views.CountryDetail.as_view(), name='retrieve-country'),
     path('update/<int:pk>/', views.CountryUpdate.as_view(), name='update-country'),
     path('delete/<int:pk>/', views.CountryDelete.as_view(), name='delete-country'),
