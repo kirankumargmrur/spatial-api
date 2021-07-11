@@ -1,0 +1,7 @@
+Django
+djangorestframework-gis
+psycopg2-binary
+django-filter
+python-decouple
+gunicorn
+pygeoapi

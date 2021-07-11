@@ -1,0 +1,82 @@
+version: "3.3"
+
+networks:
+  pixxel-net:
+
+services:
+  db:
+    image: postgis/postgis
+    container_name: pixxel_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: wDnfWovh4uf3
+    ports:
+        - "5432:5432"
+    networks:
+      - pixxel-net
+    volumes:
+      - ./postgresql:/var/lib/postgresql
+      - ./postgresql_data:/var/lib/postgresql/data
+      - ./init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+
+  webserver:
+    build: .
+    image: pixxel_webserver:v1
+    hostname: webserver
+    container_name: webserver
+    depends_on:
+      - db
+    command: 'bash /app/django_entrypoint.sh'
+    volumes:
+      - .:/app
+    networks:
+      - pixxel-net
+    ports:
+      - 8000:8000
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 150M
+        reservations:
+          cpus: '0.25'
+          memory: 50M
+
+  pygeoapi:
+    image: pixxel_webserver:v1
+    hostname: pygeoapi
+    container_name: pygeoapi
+    depends_on:
+      - db
+      - webserver
+    command: 'bash /app/pygeoapi_entrypoint.sh'
+    volumes:
+      - .:/app
+    networks:
+      - pixxel-net
+    ports:
+      - 5000:5000
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 150M
+        reservations:
+          cpus: '0.25'
+          memory: 50M
+
+  admin:
+    image: adminer
+    hostname: adminer
+    container_name: adminer
+    restart: always
+    depends_on:
+      - db
+    networks:
+      - pixxel-net
+    ports:
+      - 8080:8080
+
+volumes:
+  postgresql:
+  postgresql_data:
