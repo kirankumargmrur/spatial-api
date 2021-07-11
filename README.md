@@ -45,30 +45,30 @@ The application will come up @http://localhost:8000 for GeoDjango and @http://lo
 
 ### PYGEOAPI Server API Reference:
 PygeoAPI server can be called at @http://localhost:5000
-  - [/collections/countries/items](http://localhost:8000/collections/countries/items)
+  - [/collections/countries/items](http://localhost:5000/collections/countries/items)
       - Retrive the list of all the countries
 
 
-  - [/collections/countries/items/{id}](http://localhost:8000/collections/countries/items/{id})
+  - [/collections/countries/items/{id}](http://localhost:5000/collections/countries/items/{id})
       - Retrive Country which matches the id
 
 
-  - [/collections/countries/items?name={name} OR ?id={id} OR ?country_code={country_code}](http://localhost:8000/collections/countries/items?name={name} OR ?id={id} OR ?country_code={country_code})
+  - [/collections/countries/items?name={name} OR ?id={id} OR ?country_code={country_code}](http://localhost:5000/collections/countries/items?name={name} OR ?id={id} OR ?country_code={country_code})
       - Retrive Country which matches the query passed through the URL
 
 
-  - [/collections/countries/create](http://localhost:8000/collections/countries/create)
+  - [/collections/countries/create](http://localhost:5000/collections/countries/create)
       - REST API to create an entry in the database with data provided
 
 
-  - [/collections/countries/update](http://localhost:8000/collections/countries/update)
+  - [/collections/countries/update](http://localhost:5000/collections/countries/update)
       - POST REST API to update the existing entry in the database with data provided
 
 
-  - [/collections/countries/delete/{id}](http://localhost:8000/collections/countries/delete/{id})
+  - [/collections/countries/delete/{id}](http://localhost:5000/collections/countries/delete/{id})
       - DELETE REST API to  delete the existing entry in the database with id passed in the url ({id} - id of the entry to be deleted)
 
- - [/collections/countries/intersect/{COUNTRY_NAME}](http://localhost:8000/collections/intersect/{COUNTRY_NAME})
+ - [/collections/countries/intersect/{COUNTRY_NAME}](http://localhost:5000/collections/intersect/{COUNTRY_NAME})
     - Give the list and view of the intersection for the COUNTRY_NAME. Replace the COUNTRY_NAME with exact country name
 
 ### Geo Django Server API Reference:
