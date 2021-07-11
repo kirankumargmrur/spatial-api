@@ -133,6 +133,10 @@ curl --location --request POST 'http://localhost:5000/collections/countries/upda
 curl --location --request DELETE 'http://localhost:5000/collections/countries/delete/101'
 ```
 
+##### To test Django APIs
+
+  You can directly use the respective api page give by django to post the data or fetch the data.
+
 ### Reference
 [PyGeoApi](https://docs.pygeoapi.io/en/latest/)
 
