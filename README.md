@@ -39,6 +39,8 @@
   
  - Finally run `docker-compose up -d --build` from your terminal
 
+##### Please wait for a minute for applications to come up. I have intentionally kept 45 seconds delay in order to configure database
+
 The application will come up @http://localhost:8000 for GeoDjango and @http://localhost:5000 for pygeoapi
 
 ## API Description
