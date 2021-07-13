@@ -34,8 +34,7 @@
     DB_HOST='db'
     ```
     
-      You can copy and paste the above contents to `.env` file and replace APIKEY_1,APIKEY_2,...,APIKEY_N with your Google api keys. 
-      And also replace DB_PASSWORD value, you can refer `POSTGRES_PASSWORD` in [docker-compose.yml](/docker-compose.yml) for database password
+      You can copy and paste the above contents to `.env` file and replace DB_PASSWORD value, you can refer `POSTGRES_PASSWORD` in [docker-compose.yml](/docker-compose.yml) for database password
   
  - Finally run `docker-compose up -d --build` from your terminal
 
