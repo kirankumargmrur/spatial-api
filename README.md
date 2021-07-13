@@ -135,7 +135,7 @@ curl --location --request DELETE 'http://localhost:5000/collections/countries/de
 
 ##### To test Django APIs
 
-  You can directly use the respective api page give by django to post the data or fetch the data.
+  You can directly use the respective api page given by django to post the data or fetch the data.
 
 ### Reference
 [PyGeoApi](https://docs.pygeoapi.io/en/latest/)
